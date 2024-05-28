@@ -1,0 +1,57 @@
+<html>
+<h3>
+<center>
+<input type="text" id="n1" placeholder="Nº1">
+<button id="suma">+</button>
+<button id="resta">-</button>
+<br>
+<input type="text" id="n2" placeholder="Nº2">
+
+
+
+<button id="multiplicacion">*</button>
+<button id="division">/</button>
+<br>
+<br>
+<button id="calcular">Calcular</button>
+
+<output id="r"></output> 
+<script>
+
+    let op;
+    document.querySelector('#suma').addEventListener('click', () =>{
+        op = '+';
+    });
+    document.querySelector('#resta').addEventListener('click', () =>{
+        op = '-';
+    });
+    document.querySelector('#multiplicacion').addEventListener('click', () =>{
+        op = '*';
+    });
+    document.querySelector('#division').addEventListener('click', () =>{
+        op = '/';
+    });
+<br>
+    document.querySelector('#calcular').addEventListener('click', () =>{
+        const n1 = parseInt(document.querySelector('#n1').value);
+        const n2 = parseInt(document.querySelector('#n2').value);
+        //const op = document.querySelector('#op').value;
+        let r;
+        if(op == '+'){
+            r = n1 + n2;
+        }else if( op == '-'){
+            r = n1 - n2;
+        }else if(op == '*'){
+            r = n1 * n2;
+        }else if(op == '/'){
+            r = n1 / n2;
+        }
+        document.querySelector('#r').innerHTML = r;
+    });
+
+</script>
+<br>
+<br>
+<BODY BGCOLOR="green">
+<A HREF="micro.HTML">VOLVER
+</html>
